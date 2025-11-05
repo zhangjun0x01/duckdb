@@ -12,7 +12,7 @@ duckdb_extension_load(core_functions)
 duckdb_extension_load(parquet)
 duckdb_extension_load(iceberg
         GIT_URL https://github.com/zhangjun0x01/duckdb-iceberg
-        GIT_TAG v1.4.1
+        GIT_TAG ecs-1.4.1
 )
 
 
