@@ -119,7 +119,7 @@ static const DefaultExtension internal_extensions[] = {
     {"aws", "Provides features that depend on the AWS SDK", false},
     {"azure", "Adds a filesystem abstraction for Azure blob storage to DuckDB", false},
     {"encodings", "All unicode encodings to UTF-8", false},
-    {"iceberg", "Adds support for Apache Iceberg", false},
+    {"iceberg", "Adds support for Apache Iceberg", true},
     {"vss", "Adds indexing support to accelerate Vector Similarity Search", false},
     {"delta", "Adds support for Delta Lake", false},
     {"fts", "Adds support for Full-Text Search Indexes", false},
@@ -144,7 +144,7 @@ DefaultExtension ExtensionHelper::GetDefaultExtension(idx_t index) {
 //===--------------------------------------------------------------------===//
 static const char *const auto_install[] = {
     "motherduck", "postgres_scanner", "mysql_scanner", "sqlite_scanner", "delta", "iceberg", "uc_catalog",
-    "ui",         "ducklake",         nullptr};
+    "ui", nullptr};
 
 // TODO: unify with new autoload mechanism
 bool ExtensionHelper::AllowAutoInstall(const string &extension) {
